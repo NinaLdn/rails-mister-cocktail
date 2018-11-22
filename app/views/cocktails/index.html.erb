@@ -1,0 +1,25 @@
+<h1>* All the cocktails *</h1>
+<%= link_to "New cocktail", new_cocktail_path%>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+      <li>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/613037/pexels-photo-613037.jpeg');">
+    <!--   <div class="card-category">Cocktail</div> -->
+            <div class="card-description" id="card-font">
+              <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+    <!--      <p>Very cool city, the best</p> -->
+            </div>
+          </div>
+      </li>
+    <%end%>
+  </ul>
+
+    </div>
+  </div>
+</div>
